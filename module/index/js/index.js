@@ -126,37 +126,42 @@ class Index {
     let userListTableCode = "";
     for (let i = 0; i < dataSource.account_list.length; i++) {
       let account = dataSource.account_list[i];
+      let lastUpdateDatetime = account.profit_loss_record[account.profit_loss_record.length - 1].datetime;
+      lastUpdateDatetime = lastUpdateDatetime.substring(5);
       userListTableCode += `
         <table class = "user_list_table">
           <thead>
             <tr>
-              <td class = "account_name" colspan = "2">${account.account_name}</td>
+              <td>${account.account_name}</td><td>${lastUpdateDatetime}</td>
             </tr>
           </thead>
           <tbody>
-            <!-- <tr>
-              <td class = "account_name" colspan = "2">${account.account_name}</td>
-            </tr> -->
             <tr>
-              <td class = "order_trade_fund_name">订单交易金额</td><td class = "order_trade_fund_value">$&nbsp;${account.order_trade_fund}</td>
+              <td>浮盈</td><td>$&nbsp;${account.trade_sell_order_profit_total}</td>
             </tr>
             <tr>
-              <td class = "fund_reserve_total_name">资金储备总额</td><td class = "fund_reserve_total_value">$&nbsp;${account.fund_reserve_total.toFixed(4)}</td>
+              <td>浮亏</td><td>$&nbsp;${account.untrade_sell_order_loss_total.toFixed(4)}</td>
             </tr>
             <tr>
-              <td class = "trade_buy_order_count_name">已交易买单数量</td><td class = "trade_buy_order_count_value">${account.trade_buy_order_count}&nbsp;个</td>
+              <td>订单交易金额</td><td>$&nbsp;${account.order_trade_fund}</td>
             </tr>
             <tr>
-              <td class = "trade_sell_order_count_name">已交易卖单数量</td><td class = "trade_sell_order_count_value">${account.trade_sell_order_count}&nbsp;个</td>
+              <td>资金储备总额</td><td>$&nbsp;${account.fund_reserve_total.toFixed(4)}</td>
             </tr>
             <tr>
-              <td class = "cancel_abnormal_count_name">非正常撤单数量</td><td class = "cancel_abnormal_count_value">${account.cancel_abnormal_count}&nbsp;个</td>
+              <td>已交易买单数量</td><td>${account.trade_buy_order_count}&nbsp;个</td>
             </tr>
             <tr>
-              <td class = "last_trade_buy_order_trade_datetime_name">最新已交易买单交易时间</td><td class = "last_trade_buy_order_trade_datetime_value">${account.last_trade_buy_order_trade_datetime}</td>
+              <td>已交易卖单数量</td><td>${account.trade_sell_order_count}&nbsp;个</td>
             </tr>
             <tr>
-              <td class = "last_trade_sell_order_trade_datetime_name">最新已交易卖单交易时间</td><td class = "last_trade_buy_order_trade_datetime_value">${account.last_trade_sell_order_trade_datetime}</td>
+              <td>非正常撤单数量</td><td>${account.cancel_abnormal_count}&nbsp;个</td>
+            </tr>
+            <tr>
+              <td>最新已交易买单交易时间</td><td>${account.last_trade_buy_order_trade_datetime}</td>
+            </tr>
+            <tr>
+              <td>最新已交易卖单交易时间</td><td>${account.last_trade_sell_order_trade_datetime}</td>
             </tr>
           </tbody>
         </table>

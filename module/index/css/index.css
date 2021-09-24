@@ -114,10 +114,18 @@ body {
   text-align: right;
 }
 
-.user_list_table thead .account_name {
+.user_list_table thead td {
   font-weight: bolder;
   background-color: #c5dae3;
+}
+
+.user_list_table thead td:first-child {
   border-top-left-radius: 1rem;
+}
+
+.user_list_table thead td:last-child {
+  text-align: right;
+  font-weight: normal;
   border-top-right-radius: 1rem;
 }
 

@@ -141,7 +141,7 @@ class Index {
               <td class = "order_trade_fund_name">订单交易金额</td><td class = "order_trade_fund_value">$&nbsp;${account.order_trade_fund}</td>
             </tr>
             <tr>
-              <td class = "fund_reserve_total_name">资金储备总额</td><td class = "fund_reserve_total_value">$&nbsp;${account.fund_reserve_total}</td>
+              <td class = "fund_reserve_total_name">资金储备总额</td><td class = "fund_reserve_total_value">$&nbsp;${account.fund_reserve_total.toFixed(4)}</td>
             </tr>
             <tr>
               <td class = "trade_buy_order_count_name">已交易买单数量</td><td class = "trade_buy_order_count_value">${account.trade_buy_order_count}&nbsp;个</td>
@@ -306,13 +306,11 @@ class Index {
           {
             name: "已交易卖单盈利交易记录",
             type: "line",
-            stack: "Total",
             data: profitRecord
           },
           {
             name: "未交易卖单亏损交易记录",
             type: "line",
-            stack: "Total",
             data: lossRecord
           }
         ]

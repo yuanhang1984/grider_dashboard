@@ -7,7 +7,7 @@
 <!-- custom css -->
 <!-- *********************************************************************** -->
 <link rel = "stylesheet" type = "text/css" href = "../../css/global.css"/>
-<link rel = "stylesheet" type = "text/css" href = "./css/index.css"/>
+<link rel = "stylesheet" type = "text/css" href = "./css/contract.css"/>
 <!-- *********************************************************************** -->
 <!-- plugin js -->
 <!-- *********************************************************************** -->
@@ -19,10 +19,10 @@
 <script src = "../../js/Global.js" type = "text/javascript" charset = "utf-8"></script>
 <script src = "../../js/ObjectFactory.js" type = "text/javascript" charset = "utf-8"></script>
 <script src = "../../js/JSControl.js" type = "text/javascript" charset = "utf-8"></script>
-<script src = "./js/index.js" type = "text/javascript" charset = "utf-8"></script>
+<script src = "./js/contract.js" type = "text/javascript" charset = "utf-8"></script>
 <!-- <script src = "./js/demo.js" type = "text/javascript" charset = "utf-8"></script> -->
 <!-- <script src = "./js/data.js" type = "text/javascript" charset = "utf-8"></script> -->
-<script src = "https://yuanhang1984.github.io/grider_dashboard/module/index/js/data.js" type = "text/javascript" charset = "utf-8"></script>
+<script src = "https://yuanhang1984.github.io/grider_dashboard/module/index/js/contract.js" type = "text/javascript" charset = "utf-8"></script>
 <script>
 ////////////////////////////////////////////////////////////////////////////////
 // ECMAScript规范
@@ -37,28 +37,28 @@ Global.setHtmlFontSize(10, 750);
 ////////////////////////////////////////////////////////////////////////////////
 $(window).off("pageshow").on("pageshow", function(event) {
   //////////////////////////////////////////////////////////////////////////////
-  // [创建对象]首页。
+  // [创建对象]合约。
   //////////////////////////////////////////////////////////////////////////////
-  let index = new Index();
+  let contract = new Contract();
   //////////////////////////////////////////////////////////////////////////////
-  // [生成代码]首页。
+  // [生成代码]合约。
   //////////////////////////////////////////////////////////////////////////////
-  index.generateCode();
+  contract.generateCode();
   //////////////////////////////////////////////////////////////////////////////
   // [注释说明]初始化视图。
   //////////////////////////////////////////////////////////////////////////////
-  index.initView();
+  contract.initView();
   //////////////////////////////////////////////////////////////////////////////
   // [注释说明]初始化布局。
   //////////////////////////////////////////////////////////////////////////////
-  index.initLayout();
+  contract.initLayout();
   //////////////////////////////////////////////////////////////////////////////
   // [注释说明]初始化事件。
   //////////////////////////////////////////////////////////////////////////////
-  index.initEvent();
+  contract.initEvent();
 });
 </script>
-<title>Grider Dashboard</title>
+<title>Grider Dashboard Contract</title>
 </head>
 <body>
 </body>

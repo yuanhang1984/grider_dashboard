@@ -1,6 +1,6 @@
 "use strict";
 
-class Index {
+class Spot {
   /**
    * 构造函数
    */

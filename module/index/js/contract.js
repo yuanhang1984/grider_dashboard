@@ -139,10 +139,10 @@ class Contract {
           </thead>
           <tbody>
             <tr>
-              <td>浮盈</td><td>$&nbsp;${account.trade_up_sell_order_profit_total + account.trade_down_sell_order_profit_total}</td>
+              <td>浮盈</td><td>$&nbsp;${(account.trade_up_sell_order_profit_total + account.trade_down_sell_order_profit_total).toFixed(4)}</td>
             </tr>
             <tr>
-              <td>浮亏</td><td>$&nbsp;${account.untrade_up_sell_order_loss_total + account.untrade_down_sell_order_loss_total}</td>
+              <td>浮亏</td><td>$&nbsp;${(account.untrade_up_sell_order_loss_total + account.untrade_down_sell_order_loss_total).toFixed(4)}</td>
             </tr>
             <tr>
               <td>订单交易金额</td><td>$&nbsp;${account.order_trade_fund}</td>

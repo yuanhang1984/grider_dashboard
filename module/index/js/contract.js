@@ -160,13 +160,13 @@ class Contract {
               <td>未交易看多买单数量</td><td>${account.untrade_up_buy_order_count}&nbsp;个</td>
             </tr>
             <tr>
-              <td>未交易看多卖单数量</td><td>${account.untrade_up_sell_order_count}&nbsp;个</td>
+              <td>未交易看多卖单数量</td><td style = "color: red;">${account.untrade_up_sell_order_count}&nbsp;个</td>
             </tr>
             <tr>
               <td>未交易看空买单数量</td><td>${account.untrade_down_buy_order_count}&nbsp;个</td>
             </tr>
             <tr>
-              <td>未交易看空卖单数量</td><td>${account.untrade_down_sell_order_count}&nbsp;个</td>
+              <td>未交易看空卖单数量</td><td style = "color: red;">${account.untrade_down_sell_order_count}&nbsp;个</td>
             </tr>
             <tr>
               <td>已交易看多买单数量</td><td>${account.trade_up_buy_order_count}&nbsp;个</td>

@@ -137,7 +137,7 @@ class Spot {
           </thead>
           <tbody>
             <tr>
-              <td>浮盈</td><td>$&nbsp;${account.trade_sell_order_profit_total}</td>
+              <td>浮盈</td><td>$&nbsp;${account.trade_sell_order_profit_total.toFixed(4)}</td>
             </tr>
             <tr>
               <td>浮亏</td><td>$&nbsp;${account.untrade_sell_order_loss_total.toFixed(4)}</td>
@@ -146,7 +146,16 @@ class Spot {
               <td>订单交易金额</td><td>$&nbsp;${account.order_trade_fund}</td>
             </tr>
             <tr>
-              <td>资金储备总额</td><td>$&nbsp;${account.fund_reserve_total.toFixed(4)}</td>
+              <td>账户资产总额</td><td>$&nbsp;${account.account_asset_total.toFixed(4)}</td>
+            </tr>
+            <tr>
+              <td>可用额度</td><td>$&nbsp;${account.account_asset_free.toFixed(4)}</td>
+            </tr>
+            <tr>
+              <td>冻结额度</td><td>$&nbsp;${account.account_asset_locked.toFixed(4)}</td>
+            </tr>
+            <tr>
+              <td>已用额度</td><td>$&nbsp;${account.account_asset_used.toFixed(4)}</td>
             </tr>
             <tr>
               <td>已交易买单数量</td><td>${account.trade_buy_order_count}&nbsp;个</td>

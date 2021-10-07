@@ -158,6 +158,12 @@ class Spot {
               <td>已用额度</td><td>$&nbsp;${account.account_asset_used.toFixed(4)}</td>
             </tr>
             <tr>
+              <td>未交易买单数量</td><td>${account.untrade_buy_order_count}&nbsp;个</td>
+            </tr>
+            <tr>
+              <td>未交易卖单数量</td><td>${account.untrade_sell_order_count}&nbsp;个</td>
+            </tr>
+            <tr>
               <td>已交易买单数量</td><td>${account.trade_buy_order_count}&nbsp;个</td>
             </tr>
             <tr>

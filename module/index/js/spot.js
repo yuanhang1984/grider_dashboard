@@ -164,6 +164,9 @@ class Spot {
               <td>未交易卖单数量</td><td>${account.untrade_sell_order_count}&nbsp;个</td>
             </tr>
             <tr>
+              <td>冻结卖单数量</td><td>${account.trade_buy_order_count}&nbsp;个</td>
+            </tr>
+            <tr>
               <td>已交易买单数量</td><td>${account.trade_buy_order_count}&nbsp;个</td>
             </tr>
             <tr>
